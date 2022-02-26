@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+
+        1.块元素 块元素在显示时通常会以新的一行开始
+          比如：<h1> <p> <ul> <ol>
+        2.内联元素：通常不会以新行开始
+          比如：<b> <a> <img>
+        3.<div> 主要是组合html元素的容器,div也是从新行开始
+        4.<span> 内联元素，可作为文本的容器
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+    <style type="text/css">
+       span{
+           color: red;
+       }
+    </style>
+</head>
+<body>
+    <!--div只做元素的容器，本身没有其他效果-->
+    <div id="divid"> 
+        <p>我是一个段落</p> <!--只作用p标签，见mystyle.css文件-->
+        <a>百度一下</a>
+    </div>
+    
+    <!--一般span搭配div使用-->
+    <div>
+        <p><span> 我是span部分</span>我是后面一部分</p>
+    </div>
+
+
+</body>
+</html>

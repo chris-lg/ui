@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!--引用样式的方式
+        1.通过link标签引入css文件，
+        2.通过style标签定义
+        3.直接在使用的标签中使用stlye属性-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html5 样式</title>
+     <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+     <style type="text/css" >
+         p {
+             color: yellow;
+         }
+     </style>
+</head>
+<body>
+    <h1>我是主题标签 我的颜色被link中的css文件控制</h1>
+    <p><我是段落标签 我的颜色被style制 </p>
+    <a style="color: violet;">我是超链接标签，我的样式被自己的样式控制</a>
+</body>
+</html>
