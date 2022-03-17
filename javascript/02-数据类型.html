@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    1.值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol。
+    2.引用数据类型：对象(Object)、数组(Array)、函数(Function)。
+    注：Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。
+    */
+
+    function defineArray() {
+        var cars = ["vol","bmw","bz"];
+        cars[3] = "jieda";
+        var animals = new Array("dog","cat","alion");
+        animals[3] = "fish";
+        document.write(cars+animals);
+    }
+
+    function defineObj() {
+        var person = {
+            name:"james",
+            age:18
+        }
+
+        var n = person.name;
+        var a = person["age"];
+        document.write(n+a);
+    }
+</script> 
+<body>
+    <button onclick="defineArray()">test array</button>
+
+    <button onclick="defineObj()">test obj</button>
+    
+</body>
+</html>

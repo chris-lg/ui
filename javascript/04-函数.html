@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /**
+     * 
+     *1.在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。
+     *2.局部变量会在函数运行以后被删除。全局变量会在页面关闭后被删除。
+     *3.如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。
+     * 
+     */
+    function noParamsFunc() {
+        document.write("i am on params function");
+
+    }
+
+    function withParamsFunc(name, age) {
+        document.write(name + age);
+    }
+
+    function testWithReturnValueFunc() {
+        document.write(withReturnValueFunc());
+    }
+
+
+    function withReturnValueFunc() {
+        return 100;
+    }
+
+    //如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。
+    function testGloablVar() {
+        name = "james";
+        document.write(window.name);
+
+        delete name; //非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。
+    }
+</script>
+
+<body>
+    <button onclick="withParamsFunc('james',15)">withParamsFunc</button>
+    <button onclick="testWithReturnValueFunc()">testWithReturnValueFunc</button>
+    <button onclick="testGloablVar()">testGloablVar</button>
+</body>
+
+</html>
