@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pid">我是一个段落</p>
+    <button id="bid">我是个按钮</button>
+    <button onclick="demo()">点我</button>
+    <img id="imgid" src="../images/test.jpeg"></img>
+    <button onclick="modifyAttr()">修改标签属性值</button>
+    <script>
+        function demo() {
+            //innerHtml为元素间的内容
+            // 比如可改变该例子p标签中的 ：我是一个段落 
+            //button标签中的：我是个按钮
+            document.getElementById("bid").innerHTML = "hello wolrd";
+        }
+
+        function modifyAttr() {
+            document.getElementById("imgid").src="ccc.jpg";
+
+        }
+    </script>
+</body>
+</html>

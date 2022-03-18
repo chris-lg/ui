@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var txt = "";
+
+    function message() {
+        try {
+            adddlert("Welcome guest!");
+        } catch (err) {
+            txt = "本页有一个错误。\n\n";
+            txt += "错误描述：" + err.message + "\n\n";
+            txt += "点击确定继续。\n\n";
+            alert(txt);
+        } finally {
+            document.write("finally");
+        }
+    }
+
+    function testThrowExteption() {
+        var a = 10;
+        try {
+            if (a < 11) throw "so small";
+
+        } catch (err) {
+            document.write(err);
+        } finally {
+            document.write("finally");
+        }
+    }
+</script>
+
+<body>
+    <button onclick="message()"> dianwo </button>
+    <button onclick="testThrowExteption()"> testThrowExteption </button>
+
+</body>
+
+</html>
